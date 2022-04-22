@@ -1,0 +1,51 @@
+header {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.ir_pm{
+	display:block;
+	overflow:hidden;
+	font-size:1px;
+	line-height:0;
+	color:transparent; 
+}
+
+header .title {
+    font-size: 2.4rem;
+    text-align: center;
+    color: whitesmoke;
+    font-family: BinggraeSamanco-Bold;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 10px;
+    font-size: 0.5rem;
+    line-height: 0.9rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+footer p {
+    color: #d6d6d6;
+}
+header nav ul { 
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+header nav ul li img {
+    width: 15%;
+    padding: 1rem;
+}
+header nav ul li:first-child{
+    text-align: left;
+}
+header nav ul li:last-child{
+    text-align: right;
+}
+header nav ul li img {
+    cursor: pointer;
+}

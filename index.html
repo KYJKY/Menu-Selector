@@ -8,11 +8,19 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/media_query.css">
+    <script src="script/common.js"></script>
 </head>
 <body>
     <div class="wrap">
         <!-- 헤더영역 -->
         <header>
+            <nav>
+                <ul>
+                    <li><img id="home" src="images/home.png" alt="홈으로 가기"></li>
+                    <li><img class="logo" src="" alt=""></li>
+                    <li><img id="menuList" src="images/menu.png" alt="메뉴"></li>
+                </ul>
+            </nav>
             <h1 class="title"><span style="color: #fd3434;">S2i</span> 점심메뉴 Selector</h1>
         </header>
         <!-- 메인영역 -->
@@ -43,6 +51,33 @@
     </div>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            initControl();
+        });
+
+        function initControl() {
+            gnb();
+
+            const menu1 = document.querySelector('#menu1');
+            const menu2 = document.getElementById('menu2');
+            const menu3 = document.getElementById('menu3');
+            const menu4 = document.getElementById('menu4');
+
+            menu1.addEventListener('click', () => {
+                location.href='random-wheel.html'
+            });
+            menu2.addEventListener('click', () => {
+                location.href='random-slot.html'
+            });
+            menu3.addEventListener('click', () => {
+                location.href='map.html'
+            });
+            menu4.addEventListener('click', () => {
+                location.href='info.html'
+            });
+        }
+
+
         
     </script>
 </body>
