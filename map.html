@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S2i 점심메뉴 Selector</title>
+
+    <link rel="stylesheet" href="css/random-slot.css">
+    <link rel="stylesheet" href="css/media_query.css">
+    <script src="script/common.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더영역 -->
+        <header>
+            <nav>
+                <ul>
+                    <li><img id="home" src="images/home.png" alt="홈으로 가기"></li>
+                    <li><img class="logo" src="" alt=""></li>
+                    <li><img id="menuList" src="images/menu.png" alt="메뉴"></li>
+                </ul>
+            </nav>
+            <h1 class="title"><span style="color: #fd3434;">S2i</span> 장부식당 지도</h1>
+        </header>
+        <!-- 메인영역 -->
+        <main class="box-menu">
+        </main>
+        <!-- 푸터영역 -->
+        <footer>
+            <!--<img src="" alt="스포츠투아이 로고">-->
+            <p>문의사항: 개발3팀 김연중 kkk3052@sports2i.com</p>
+            <p>Copyright © sports2i Corp</p>
+        </footer> 
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            initControl();
+        });
+
+        function initControl() {
+            gnb();
+
+            const menu1 = document.querySelector('#menu1');
+            const menu2 = document.getElementById('menu2');
+            const menu3 = document.getElementById('menu3');
+            const menu4 = document.getElementById('menu4');
+
+            menu1.addEventListener('click', () => {
+                location.href='random-wheel.html'
+            });
+            menu2.addEventListener('click', () => {
+                location.href='random-slot.html'
+            });
+            menu3.addEventListener('click', () => {
+                location.href='map.html'
+            });
+            menu4.addEventListener('click', () => {
+                location.href='info.html'
+            });
+        }
+
+
+        
+    </script>
+</body>
+</html>

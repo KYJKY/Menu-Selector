@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S2i 점심메뉴 Selector</title>
+
+    <link rel="stylesheet" href="css/random-slot.css">
+    <link rel="stylesheet" href="css/media_query.css">
+    <script src="script/common.js"></script>
+    <script src="data/menuData.js"></script>
+    <script src="data/sikdangData.js"></script>
+    <script src="data/dataArray.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더영역 -->
+        <header>
+            <nav>
+                <ul>
+                    <li><img id="home" src="images/home.png" alt="홈으로 가기"></li>
+                    <li><img class="logo" src="" alt=""></li>
+                    <li><img id="menuList" src="images/menu.png" alt="메뉴"></li>
+                </ul>
+            </nav>
+            <div class="head-slot">S2i Lunch Slot</div>
+        </header>
+        <!-- 메인영역 -->
+        <main class="box-menu">
+            <section>
+                <h2 class="ir_pm">슬롯머신 영역입니다.</h2>
+                <div class="container-slot">
+                    <div id="boxScreen" class="screen-slot">
+                    </div>
+
+                    <div class="select-slot">
+                        <select id="selSikdang">
+                            <option value="buheung">부흥정육식당</option>
+                            <option value="moms">맘스터치</option>
+                            <option value="gamasot">가마솥 순대국</option>
+                            <option value="oback">오백국수</option>
+                            <option value="chamsut">참숯 막·소·국</option>
+                            <option value="toko">토코카츠</option>
+                            <option value="kimbab">김밥매니아</option>
+                            <option value="salom">살롬돈까스</option>
+                            <option value="frank">프랭크버거</option>
+                        </select>
+                        &nbsp;&nbsp; &lt; &nbsp;
+                        Pick
+                    </div>
+
+                    <button class="btn-slot-stop">STOP</button>
+                </div>
+            </section>
+        </main>
+        <!-- 푸터영역 -->
+        <footer>
+            <!--<img src="" alt="스포츠투아이 로고">-->
+            <p>문의사항: 개발3팀 김연중 kkk3052@sports2i.com</p>
+            <p>Copyright © sports2i Corp</p>
+        </footer> 
+    </div>
+
+    <script>
+        let selSikdang = document.getElementById('selSikdang');
+        let nowSikdang = selSikdang.options[selSikdang.selectedIndex].value;
+
+        
+
+
+        document.addEventListener("DOMContentLoaded", function(){
+            initControl();
+        });
+
+        function initControl() {
+            gnb();
+            setSlot(nowSikdang);
+            rolling();
+            
+        }
+        
+        // 식당 교체
+        selSikdang.addEventListener('change', change);
+        function change() {
+            nowSikdang = selSikdang.options[selSikdang.selectedIndex].value;
+            console.log(nowSikdang);
+        }
+
+        // 슬롯세팅
+        function setSlot(sikdang) {
+            let ul = $('<ul/>');
+            let li = $('<li/>');
+
+
+            switch(sikdang){
+                case 'buheung':
+                    // 하다맘
+
+            }
+        }
+
+
+        
+    </script>
+</body>
+</html>

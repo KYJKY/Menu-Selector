@@ -1,0 +1,14 @@
+@import url(reset.css);
+@import url(font.css);
+@import url(layout.css);
+
+html {
+    font-family: establishRoomNo703OTF;
+    font-size: 16px;
+    background-color: #092d4c;
+}
+
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+}
